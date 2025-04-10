@@ -1,0 +1,87 @@
+[
+    {
+        "Name" : "Paper",
+        "identifier" : "paper",
+        "canRecycle" : true        
+    },
+    {
+        "Name" : "Plastic Cup",
+        "identifier" : "plasticcup",
+        "canRecycle" : true
+    },
+    {
+        "Name" : "Plastic Bag",
+        "identifier" : "plasticbag",
+        "canRecycle" : false
+    },
+    {
+        "Name" : "Paper Cup",
+        "identifier" : "papercup",
+        "canRecycle" : true
+    },
+    {
+        "Name" : "Book",
+        "identifier" : "book",
+        "canRecycle" : false
+    },
+    {
+        "Name" : "Cardboard",
+        "identifier" : "cardboard",
+        "canRecycle" : true
+    },
+    {
+        "Name" : "Glass Bottle",
+        "identifier" : "glassbottle",
+        "canRecycle" : true
+    },
+    {
+        "Name" : "Plastic Bottle",
+        "identifier" : "plasticbottle",
+        "canRecycle" : true
+    },
+    {
+        "Name" : "Aluminum Can",
+        "identifier" : "aluminumcan",
+        "canRecycle" : true
+    },
+    {
+        "Name" : "Food Waste",
+        "identifier" : "foodwaste",
+        "canRecycle" : false
+    },
+    {
+        "Name" : "Metal Can",
+        "identifier" : "metalcan",
+        "canRecycle" : true
+    },
+    {
+        "Name" : "Styrofoam",
+        "identifier" : "styrofoam",
+        "canRecycle" : false
+    },
+    {
+        "Name" : "Batteries",
+        "identifier" : "batteries",
+        "canRecycle" : false
+    },
+    {
+        "Name" : "Electronics",
+        "identifier" : "electronics",
+        "canRecycle" : false
+    },
+    {
+        "Name" : "Light Bulbs",
+        "identifier" : "lightbulbs",
+        "canRecycle" : false
+    },
+    {
+        "Name" : "Tires",
+        "identifier" : "tires",
+        "canRecycle" : false
+    },
+    {
+        "Name" : "Textiles",
+        "identifier" : "textiles",
+        "canRecycle" : false
+    }
+]

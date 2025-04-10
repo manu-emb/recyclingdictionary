@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./homepage.css">
+</head>
+<body onload="loadSearchData()">
+    <div class="container" onKeyPress="return checksubmit(event)">
+        <p class="title">Search</p> 
+        <form action="./search.html">
+            <!--search box-->
+            <input id="textBox" type="text" name="q" autocomplete="off" onkeyup="search()">
+        </form>
+        <div id="list"></div>
+        <script src="./homepage.js"> </script>
+    </div>
+</body>
+</html>

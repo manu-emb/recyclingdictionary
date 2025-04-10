@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let url_string = window.location.href; 
+    let url = new URL(url_string);
+    let q = url.searchParams.get("q");
+    document.body.innerHTML = "<p>" + q + "</p>"
+</script>
+</html>
