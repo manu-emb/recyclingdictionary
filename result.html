@@ -3,17 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Results</title>
     <link rel="stylesheet" href="./homepage.css">
 </head>
 <body>
-    <p class="titleResult">Search</p> 
-    <p id="itemname"></p>
+    <p class="logoResult">Search</p> 
+    <p id="title">Loading item...</p>
 </body>
 <script>
     let url_string = window.location.href; 
     let url = new URL(url_string);
     let q = url.searchParams.get("q");
-    document.body.getElementsByid.innerHTML = q
+    let searchItems = [];
+    let itemIndex = null;
+    fetch("recyclingitems.json")
+        .then(response => response.json())
+        .then(data => {
+            searchItems = data;
+            //find the index in the list
+            for(i = 0; i < searchItems.length; i++){
+                if (searchItems[i].identifier == q){
+                    itemIndex = i
+                    break
+                }
+            }
+            if (itemIndex !== null){
+                document.getElementById("title").innerText = searchItems[itemIndex].name    ;
+            }
+        });
+        
 </script>
 </html>

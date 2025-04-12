@@ -35,7 +35,7 @@ function loadSearchData() {
             // Add each data item as an <a> tag
             searchItems.forEach((item)=>{
                 let b = document.createElement("button");
-                b.innerText = item.Name;
+                b.innerText = item.name;
                 //add the class name
                 b.classList.add("itemsFromList");
                 // Add click event to navigate to result.html
