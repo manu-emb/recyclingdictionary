@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
 </head>
-<body>
-    
+<body onload="loadSearchData()">
+    <p id="query"></p>
+    <div id="list"></div>
+    <script src="./homepage.js"> </script>
 </body>
 <script>
     let url_string = window.location.href; 
     let url = new URL(url_string);
     let q = url.searchParams.get("q");
-    document.body.innerHTML = "<p>" + q + "</p>"
+    document.getElementById("query").innerHTML = q;
 </script>
 </html>
