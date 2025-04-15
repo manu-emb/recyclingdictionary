@@ -9,6 +9,7 @@
 <body>
     <p class="logoResult">Search</p> 
     <p id="title">Loading item...</p>
+    <img id="img" src="">
 </body>
 <script>
     let url_string = window.location.href; 
@@ -28,7 +29,8 @@
                 }
             }
             if (itemIndex !== null){
-                document.getElementById("title").innerText = searchItems[itemIndex].name    ;
+                document.getElementById("title").innerText = searchItems[itemIndex].name;
+                document.getElementById("img").src = `images/${searchItems[itemIndex].identifier}.png`
             }
         });
         
