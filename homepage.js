@@ -3,11 +3,17 @@ function checksubmit(e){
         document.getElementById("textBox").submit
     }
 }
-function search(){
+function search(isTextBox){
     //search functionality
     let listElem = document.getElementById("list");
     let listItems = document.getElementsByClassName("itemsFromList");
-    let input = document.getElementById("textBox").value;
+
+    let input = null
+    if (isTextBox){
+        input = document.getElementById("textBox").value;
+    } else {
+        input = document.getElementById("query").innerText;
+    }
     input = input.toLowerCase()
 
     //check input
@@ -23,7 +29,7 @@ function search(){
     }
     listElem.style.display = noResults ? "none" : "block";
 }
-function loadSearchData() {
+function loadSearchData(preview) {
     let searchItems = []
     fetch("recyclingitems.json")
         .then(response => response.json())
@@ -45,6 +51,9 @@ function loadSearchData() {
                 //add to list element
                 listElem.appendChild(b);
             })
+            if (preview == true){
+                search(false);
+            }
         })
         .catch(error => console.log(error));
   }
