@@ -13,6 +13,7 @@
     }
 .logoResult {
     margin-top: 10px;
+    margin-bottom: 0px;
     font-size: 25px;
     color:red
 }
@@ -29,8 +30,8 @@
 #list {
     border: 1px solid lightgrey;
     display: none;
- }
- .itemsFromList {
+}
+.itemsFromList {
     display: flex;
     flex-direction: column;
     text-decoration: none;
@@ -38,7 +39,12 @@
     width: 300px;
     padding: 5px 20px;
     color: black;
- }
- .itemsFromList:hover {
+}
+.itemsFromList:hover {
     background-color: lightgray;
- }
+}
+#title {
+    font-size: 25px;
+    font-family: "Segoe UI";
+    margin-top: 20px;
+}
