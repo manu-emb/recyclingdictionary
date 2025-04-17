@@ -1,7 +1,8 @@
 [
     {
-        "name": "Aluminum Can",
+        "name": "Aluminum Cans and Lids",
         "identifier": "aluminumcan",
+        "group": "Aluminum and Steel",
         "canRecycle": true
     },
     {
@@ -82,6 +83,144 @@
     {
         "name": "Tires",
         "identifier": "tires",
+        "canRecycle": false
+    },
+    {
+        "name": "Food and Beverage Cans",
+        "identifier": "foodandbeveragecans",
+        "group": "Aluminum and Steel",
+        "canRecycle": true
+    },
+    {
+        "name": "Coffee Cans",
+        "identifier": "coffeecans",
+        "group": "Aluminum and Steel",
+        "canRecycle": true
+    },
+    {
+        "name": "Tuna Cans",
+        "identifier": "tunacans",
+        "group": "Aluminum and Steel",
+        "canRecycle": true
+    },
+    {
+        "name": "Soft Drink Cans",
+        "identifier": "softdrinkcans",
+        "group": "Aluminum and Steel",
+        "canRecycle": true
+    },
+    {
+        "name": "Soup Cans",
+        "identifier": "soupcans",
+        "group": "Aluminum and Steel",
+        "canRecycle": true
+    },
+    {
+        "name": "Sauce Cans",
+        "identifier": "saucecans",
+        "group": "Aluminum and Steel",
+        "canRecycle": true
+    },
+    {
+        "name": "Pet Food Cans",
+        "identifier": "petfoodcans",
+        "group": "Aluminum and Steel",
+        "canRecycle": true
+    },
+    {
+        "name": "Cookie Tin Containers",
+        "identifier": "cookietincontainers",
+        "group": "Aluminum and Steel",
+        "canRecycle": true
+    },
+    {
+        "name": "Pots",
+        "identifier": "pots",
+        "group": "Aluminum and Steel",
+        "canRecycle": false
+    },
+    {
+        "name": "Pans",
+        "identifier": "pans",
+        "group": "Aluminum and Steel",
+        "canRecycle": false
+    },
+    {
+        "name": "Baking Trays",
+        "identifier": "bakingtrays",
+        "group": "Aluminum and Steel",
+        "canRecycle": false
+    },
+    {
+        "name": "Aluminum Foil",
+        "identifier": "aluminumfoil",
+        "group": "Aluminum and Steel",
+        "canRecycle": false
+    },
+    {
+        "name": "Aluminum Trays",
+        "identifier": "aluminumtrays",
+        "group": "Aluminum and Steel",
+        "canRecycle": false
+    },
+    {
+        "name": "Aluminum Pie Plates",
+        "identifier": "aluminumpieplates",
+        "group": "Aluminum and Steel",
+        "canRecycle": false
+    },
+    {
+        "name": "Aerosol/Spray Cans",
+        "identifier": "aerosolspraycans",
+        "group": "Aluminum and Steel",
+        "canRecycle": false
+    },
+    {
+        "name": "Foil-lined Cardboard Take-out Containers and Lids",
+        "identifier": "foilcardboardtakeoutcontainerslids",
+        "group": "Aluminum and Steel",
+        "canRecycle": false
+    },
+    {
+        "name": "Electronics",
+        "identifier": "electronics",
+        "group": "Aluminum and Steel",
+        "canRecycle": false
+    },
+    {
+        "name": "Appliances",
+        "identifier": "appliances",
+        "group": "Aluminum and Steel",
+        "canRecycle": false
+    },
+    {
+        "name": "Metal Toys",
+        "identifier": "metaltoys",
+        "group": "Aluminum and Steel",
+        "canRecycle": false
+    },
+    {
+        "name": "Wire Coat Hangers",
+        "identifier": "wirecoathangers",
+        "group": "Aluminum and Steel",
+        "canRecycle": false
+    },
+    {
+        "name": "Scrap Metal",
+        "identifier": "scrapmetal",
+        "group": "Aluminum and Steel",
+        "canRecycle": false
+    },
+    {
+        "name": "Paint Cans",
+        "identifier": "paintcans",
+        "group": "Aluminum and Steel",
+        "canRecycle": false
+    },
+    {
+        "name": "Gas Cylinders (Propane, Butane, etc.)",
+        "identifier": "gascylinders",
+        "group": "Aluminum and Steel",
         "canRecycle": false
     }
 ]
