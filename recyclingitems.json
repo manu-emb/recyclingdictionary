@@ -1,7 +1,7 @@
 [
     {
-        "name": "Aluminum Cans and Lids",
-        "identifier": "aluminumcan",
+        "name": "Aluminum Cans",
+        "identifier": "aluminumcans",
         "group": "Aluminum and Steel",
         "canRecycle": true
     },
@@ -18,6 +18,7 @@
     {
         "name": "Cardboard",
         "identifier": "cardboard",
+        "group": "Cardboard and Boxboard",
         "canRecycle": true
     },
     {
@@ -222,5 +223,83 @@
         "identifier": "gascylinders",
         "group": "Aluminum and Steel",
         "canRecycle": false
+    },
+    {
+        "name": "Cardboard Boxes",
+        "identifier": "cardboardboxes",
+        "group": "Cardboard and Boxboard",
+        "canRecycle": true
+    },
+    {
+        "name": "Boxboard",
+        "identifier": "boxboard",
+        "group": "Cardboard and Boxboard",
+        "canRecycle": true
+    },
+    {
+        "name": "Pizza Boxes",
+        "identifier": "pizzaboxes",
+        "group": "Cardboard and Boxboard",
+        "canRecycle": true
+    },
+    {
+        "name": "Cereal Boxes",
+        "identifier": "cerealboxes",
+        "group": "Cardboard and Boxboard",
+        "canRecycle": true
+    },
+    {
+        "name": "Shoe Boxes",
+        "identifier": "shoeboxes",
+        "group": "Cardboard and Boxboard",
+        "canRecycle": true
+    },
+    {
+        "name": "Box Inserts",
+        "identifier": "boxinserts",
+        "group": "Cardboard and Boxboard",
+        "canRecycle": true
+    },
+    {
+        "name": "Egg Cartons",
+        "identifier": "eggcartons",
+        "group": "Cardboard and Boxboard",
+        "canRecycle": true
+    },
+    {
+        "name": "Cardboard Drink Trays",
+        "identifier": "cardboarddrinktrays",
+        "group": "Cardboard and Boxboard",
+        "canRecycle": true
+    },
+    {
+        "name": "Tissue Paper Boxes",
+        "identifier": "tissuepaperboxes",
+        "group": "Cardboard and Boxboard",
+        "canRecycle": true
+    },
+    {
+        "name": "Empty Toilet Paper and Paper Towel Rolls",
+        "identifier": "emptytoiletpaperpapertowelrolls",
+        "group": "Cardboard and Boxboard",
+        "canRecycle": true
+    },
+    {
+        "name": "Take-Out Beverage Trays",
+        "identifier": "takeoutbeveragetrays",
+        "group": "Cardboard and Boxboard",
+        "canRecycle": true
+    },
+    {
+        "name": "Pizza Boxes (Greasy)",
+        "identifier": "pizzaboxesgreasy",
+        "group": "Cardboard and Boxboard",
+        "canRecycle": false
+    },
+    {
+        "name": "Pizza Boxes (Minimal food residue)",
+        "identifier": "pizzaboxesminimalfoodresidue",
+        "group": "Cardboard and Boxboard",
+        "canRecycle": true
     }
 ]
