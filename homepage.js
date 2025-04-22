@@ -8,6 +8,7 @@ function search(isTextBox){
     let listElem = document.getElementById("list");
     let listItems = document.getElementsByClassName("itemsFromList");
 
+    //since homepage.js is reused, assign input based on if we are on home page or results page
     let input = null
     if (isTextBox){
         input = document.getElementById("textBox").value;
@@ -17,14 +18,18 @@ function search(isTextBox){
     input = input.toLowerCase()
 
     //check input
-    noResults = true; 
+    let noResults = true; 
+    let limit = 8; //limit for search results
+    let resultCounter = 0;
     for (i = 0; i < listItems.length; i++){
         if (!listItems[i].innerHTML.toLowerCase().includes(input) || input === "") {
             listItems[i].style.display = "none";
             continue
-        } else {
+        } else if (resultCounter < limit){
             listItems[i].style.display = "flex";
             noResults = false; 
+            resultCounter++;
+            console.log(resultCounter);
         }
     }
     listElem.style.display = noResults ? "none" : "block";
@@ -42,6 +47,8 @@ function loadSearchData(preview) {
             searchItems.forEach((item)=>{
                 let b = document.createElement("button");
                 b.innerText = item.name;
+                //initialize with not being displayed
+                b.style.display = "none";
                 //add the class name
                 b.classList.add("itemsFromList");
                 // Add click event to navigate to result.html
