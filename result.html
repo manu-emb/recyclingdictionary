@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="./homepage.css">
 </head>
 <body>
-    <p class="logoResult">Search</p> 
-    <p id="title">Loading item...</p>
-    <img id="img" src="">
+    <div class="container">
+        <p class="logoResult">Search</p> 
+        <p id="title">Loading item...</p>
+        <img id="img" src="" width="150" height="150">
+        <p id="recycling-status"></p>
+    </div>
 </body>
 <script>
     let url_string = window.location.href; 
@@ -31,8 +34,13 @@
             if (itemIndex !== null){
                 document.getElementById("title").innerText = searchItems[itemIndex].name;
                 document.getElementById("img").src = `images/${searchItems[itemIndex].identifier}.png`
+                if (searchItems[itemIndex].canRecycle == true){
+                    document.getElementById("recycling-status").innerText = "Item is recyclable";
+                }
+                else {
+                    document.getElementById("recycling-status").innerText = "Item is not recyclable";
+                }
             }
-        });
-        
+        });     
 </script>
 </html>
