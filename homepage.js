@@ -25,7 +25,7 @@ function search(isTextBox){
         if (!listItems[i].innerHTML.toLowerCase().includes(input) || input === "") {
             listItems[i].style.display = "none";
             continue
-        } else if (resultCounter < limit){
+        } else if (resultCounter < limit | !isTextBox){
             listItems[i].style.display = "flex";
             noResults = false; 
             resultCounter++;
@@ -59,7 +59,7 @@ function loadSearchData(preview) {
                 listElem.appendChild(b);
             })
             if (preview == true){
-                search(false);
+                search(IsTextBox = false);
             }
         })
         .catch(error => console.log(error));

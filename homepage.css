@@ -34,16 +34,24 @@
 }
 
 #list {
-    border: 1px solid lightgrey;
     display: none;
-    border-radius: 10px;
 }
 #list .itemsFromList {
-    width: 500px;
-    max-width: 80vw;
     background-color: white;
     border: 1px solid rgb(57, 56, 56);
 }
+
+.home .itemsFromList{
+    width: 500px;
+    max-width: 80vw;
+}
+
+.search .itemsFromList{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: auto;
+}
+
 #list .itemsFromList:hover{
     background-color: rgb(240, 240, 240);
 }
