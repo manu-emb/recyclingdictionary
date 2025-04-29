@@ -32,16 +32,6 @@
         "canRecycle": false
     },
     {
-        "name": "Glass Bottle",
-        "identifier": "glassbottle",
-        "canRecycle": true
-    },
-    {
-        "name": "Light Bulbs",
-        "identifier": "lightbulbs",
-        "canRecycle": false
-    },
-    {
         "name": "Metal Can",
         "identifier": "metalcan",
         "canRecycle": true
@@ -240,7 +230,8 @@
         "name": "Pizza Boxes",
         "identifier": "pizzaboxes",
         "group": "Cardboard and Boxboard",
-        "canRecycle": true
+        "canRecycle": true,
+        "note": "Must have minimal grease and food residue"
     },
     {
         "name": "Cereal Boxes",
@@ -301,5 +292,185 @@
         "identifier": "pizzaboxesminimalfoodresidue",
         "group": "Cardboard and Boxboard",
         "canRecycle": true
+    },
+    {
+        "name": "Aseptic Cartons",
+        "identifier": "asepticcartons",
+        "group": "Cartons",
+        "canRecycle": true
+    },
+    {
+        "name": "Gable Top Cartons",
+        "identifier": "gabletopcartons",
+        "group": "Cartons",
+        "canRecycle": true
+    },
+    {
+        "name": "Juice Boxes",
+        "identifier": "juiceboxes",
+        "group": "Cartons",
+        "canRecycle": true
+    },
+    {
+        "name": "Milk Cartons",
+        "identifier": "milkcartons",
+        "group": "Cartons",
+        "canRecycle": true
+    },
+    {
+        "name": "Soup Cartons",
+        "identifier": "soupcartons",
+        "group": "Cartons",
+        "canRecycle": true
+    },
+    {
+        "name": "Juice Cartons",
+        "identifier": "juicecartons",
+        "group": "Cartons",
+        "canRecycle": true
+    },
+    {
+        "name": "Frozen Dessert Boxes",
+        "identifier": "frozendessertboxes",
+        "group": "Cartons",
+        "canRecycle": true
+    },
+    {
+        "name": "Frozen Ice Cream Cartons",
+        "identifier": "frozenicecreamcartons",
+        "group": "Cartons",
+        "canRecycle": true
+    },
+    {
+        "name": "Frozen Yogurt Cartons",
+        "identifier": "frozenyogurtcartons",
+        "group": "Cartons",
+        "canRecycle": true
+    },
+    {
+        "name": "Food and Drink Pouches",
+        "identifier": "foodanddrinkpouches",
+        "group": "Cartons",
+        "canRecycle": false
+    },
+    {
+        "name": "Paper Straws",
+        "identifier": "paperstraws",
+        "group": "Cartons",
+        "canRecycle": false
+    },
+    {
+        "name": "Plastic Straws",
+        "identifier": "plasticstraws",
+        "group": "Cartons",
+        "canRecycle": false
+    }, 
+    {
+        "name": "Glass Jars",
+        "identifier": "glassjars",
+        "group": "Glass",
+        "canRecycle": true
+    },
+    {
+        "name": "Glass Bottles",
+        "identifier": "glassbottles",
+        "group": "Glass",
+        "canRecycle": true
+    },
+    {
+        "name": "Glass Containers",
+        "identifier": "glasscontainers",
+        "group": "Glass",
+        "canRecycle": true
+    },
+    {
+        "name": "Glass Food and Beverage Containers",
+        "identifier": "glassfoodandbeveragecontainers",
+        "group": "Glass",
+        "canRecycle": true
+    },
+    {
+        "name": "Salsa Jars",
+        "identifier": "salsajars",
+        "group": "Glass",
+        "canRecycle": true
+    },
+    {
+        "name": "Olive Oil Bottles",
+        "identifier": "oliveoilbottles",
+        "group": "Glass",
+        "canRecycle": true
+    },
+    {
+        "name": "Juice Bottles",
+        "identifier": "juicebottles",
+        "group": "Glass",
+        "canRecycle": true
+    },
+    {
+        "name": "Hard Liquor and Wine Bottles",
+        "identifier": "hardliquorandwinebottles",
+        "group": "Glass",
+        "canRecycle": true
+    },
+    {
+        "name": "Cosmetic Containers",
+        "identifier": "cosmeticcontainers",
+        "group": "Glass",
+        "canRecycle": true
+    },
+    {
+        "name": "Perfume Bottles",
+        "identifier": "perfumebottles",
+        "group": "Glass",
+        "canRecycle": true
+    },
+    {
+        "name": "Drinking Glasses",
+        "identifier": "drinkingglasses",
+        "group": "Glass",
+        "canRecycle": false
+    },
+    {
+        "name": "Glass Cookware",
+        "identifier": "glasscookware",
+        "group": "Glass",
+        "canRecycle": false
+    },
+    {
+        "name": "Ceramics",
+        "identifier": "ceramics",
+        "group": "Glass",
+        "canRecycle": false
+    },
+    {
+        "name": "Porcelain",
+        "identifier": "porcelain",
+        "group": "Glass",
+        "canRecycle": false
+    },
+    {
+        "name": "Broken Glass",
+        "identifier": "brokenglass",
+        "group": "Glass",
+        "canRecycle": false
+    },
+    {
+        "name": "Mirrors",
+        "identifier": "mirrors",
+        "group": "Glass",
+        "canRecycle": false
+    },
+    {
+        "name": "Light Bulbs",
+        "identifier": "lightbulbs",
+        "group": "Glass",
+        "canRecycle": false
+    },
+    {
+        "name": "Automotive Glass",
+        "identifier": "automotiveglass",
+        "group": "Glass",
+        "canRecycle": false
     }
 ]

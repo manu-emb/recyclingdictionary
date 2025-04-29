@@ -12,6 +12,7 @@
         <p id="title">Loading item...</p>
         <img id="img" src="" width="150" height="150">
         <p id="recycling-status"></p>
+        <p id="recycling-notes"></p>
     </div>
 </body>
 <script>
@@ -39,6 +40,9 @@
                 }
                 else {
                     document.getElementById("recycling-status").innerHTML = "<span style=\"color:red\">✘ Item is not recyclable</span>";
+                }
+                if (searchItems[itemIndex].note != null){
+                    document.getElementById("recycling-notes").innerText = searchItems[itemIndex].note;
                 }
             }
         });     
