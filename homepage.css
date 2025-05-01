@@ -35,6 +35,8 @@
 
 #list {
     display: none;
+    align-items: center;
+    flex-direction: column;
 }
 #list .itemsFromList {
     background-color: white;
@@ -49,7 +51,7 @@
 .search .itemsFromList{
     margin-top: 10px;
     margin-bottom: 10px;
-    width: auto;
+    width: fit-content;
 }
 
 #list .itemsFromList:hover{
@@ -80,4 +82,11 @@
 #recycling-notes {
     font-family: "Open Sans";
     margin-top: 30px;
+}
+#linkToGames {
+    height: 40px;
+    width: 100px;
+    position: absolute;
+    top: 8px;
+    right: 16px;
 }

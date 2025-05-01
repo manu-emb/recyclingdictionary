@@ -32,7 +32,7 @@ function search(isTextBox){
             console.log(resultCounter);
         }
     }
-    listElem.style.display = noResults ? "none" : "block";
+    listElem.style.display = noResults ? "none" : "flex";
 }
 function loadSearchData(preview) {
     let searchItems = []
