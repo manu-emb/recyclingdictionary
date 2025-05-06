@@ -17,5 +17,10 @@
         <button id="linkToGames" onclick= "window.location.href = 'games.html'">Games</button>
         <script src="./homepage.js"> </script>
     </div>
+    <script>
+        if ('serviceWorker' in navigator){
+            navigator.serviceWorker.register('/sw.js')
+        }
+    </script>
 </body>
 </html>
