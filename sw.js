@@ -3,13 +3,13 @@ importScripts(
 );
 // Precache essential files
 workbox.precaching.precacheAndRoute([
-    { url: '/', revision: '1' },
-    { url: '/index.html', revision: '1' },
-    { url: '/homepage.css', revision: '1' },
-    { url: '/homepage.js', revision: '1' },
-    { url: '/search.html', revision: '1' },
-    { url: '/result.html', revision: '1'},
-    { url: 'recyclingitems.json', revision: '1' },
+    { url: '/recyclingdictionary', revision: '1' },
+    { url: '/recyclingdictionary/index.html', revision: '1' },
+    { url: '/recyclingdictionary/homepage.css', revision: '1' },
+    { url: '/recyclingdictionary/homepage.js', revision: '1' },
+    { url: '/recyclingdictionary/search.html', revision: '1' },
+    { url: '/recyclingdictionary/result.html', revision: '1'},
+    { url: '/recyclingdictionary/recyclingitems.json', revision: '1' },
 ]);
 
 workbox.routing.registerRoute(
@@ -29,8 +29,8 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
       caches.open('result-cache').then((cache) => {
         return cache.addAll([
-          '/search.html',
-          '/result.html'
+          '/recyclingdictionary/search.html',
+          '/recyclingdictionary/result.html'
         ]);
       })
     );
@@ -38,7 +38,7 @@ self.addEventListener('install', (event) => {
 
 // Register a route with caching strategy
 workbox.routing.registerRoute(
-    ({ url }) => url.pathname === '/search.html' || url.pathname === '/result.html',
+    ({ url }) => url.pathname === '/recyclingdictionary/search.html' || url.pathname === '/recyclingdictionary/result.html',
     new workbox.strategies.StaleWhileRevalidate({
         cacheName: 'result-cache',
         plugins: [
