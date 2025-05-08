@@ -40,7 +40,8 @@ function loadSearchData(preview) {
         .then(response => response.json())
         .then(data => {
             searchItems = data;
-            console.log(searchItems)})
+            //console.log(searchItems)
+        })
         .then(x => {    //get the "list" HTML element
             let listElem = document.getElementById("list");
             // Add each data item as an <a> tag
