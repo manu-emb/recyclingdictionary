@@ -32,18 +32,17 @@
         const games = document.getElementById('linkToGames');
         
         console.log(innerWidth / innerHeight)
-        if (innerWidth / innerHeight <= 0.7){
-            textbox.addEventListener('focus', () => {
-                logo.style.display = "none"; 
-                games.style.display = "none"; 
-                //scroll to the top to prevent search bar from getting out of view
-                document.body.scrollTop = 0; // For Safari
-                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-            });
-
-            textbox.addEventListener('blur', () => {
-                logo.style.display = "block";
-                games.style.display = "block";
+        if (innerWidth / innerHeight <= 0.99){
+            document.addEventListener('click', function(event) {
+                // Check if the target element is the search box or the list items
+                let isClickInside = event.target == document.getElementById("textBox") || document.getElementById("list").contains(event.target);
+                if (isClickInside) {
+                    logo.style.display = "none"; 
+                    games.style.display = "none"; 
+                }else{
+                    logo.style.display = "block"; 
+                    games.style.display = "block"; 
+                }
             });
         }
     </script>

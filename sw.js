@@ -1,16 +1,26 @@
 importScripts(
     'https://storage.googleapis.com/workbox-cdn/releases/6.4.1/workbox-sw.js'
 );
-// Precache essential files
-workbox.precaching.precacheAndRoute([
-    { url: '/recyclingdictionary', revision: '1' },
-    { url: '/recyclingdictionary/index.html', revision: '1' },
-    { url: '/recyclingdictionary/homepage.css', revision: '1' },
-    { url: '/recyclingdictionary/homepage.js', revision: '1' },
-    { url: '/recyclingdictionary/search.html', revision: '1' },
-    { url: '/recyclingdictionary/result.html', revision: '1'},
-    { url: '/recyclingdictionary/recyclingitems.json', revision: '1' },
-]);
+// Precache essential files on install
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    caches.open('general-cache').then((cache) => {
+      return cache.addAll([
+        '/recyclingdictionary/',
+        '/recyclingdictionary/index.html',
+        '/recyclingdictionary/homepage.css',
+        '/recyclingdictionary/homepage.js',
+        '/recyclingdictionary/recyclingitems.json'
+      ]);
+    }),
+    caches.open('result-cache').then((cache) => {
+      return cache.addAll([
+        '/recyclingdictionary/search.html',
+        '/recyclingdictionary/result.html'
+      ]);
+    })      
+  );
+});
 
 workbox.routing.registerRoute(
     ({request}) => request.destination === 'image',
@@ -24,30 +34,34 @@ const cacheKeyWillBeUsed = ({ request }) => {
     return url.toString();
   };
 
-// Install event to precache search.html & result.html in "my-cache"
-self.addEventListener('install', (event) => {
-    event.waitUntil(
-      caches.open('result-cache').then((cache) => {
-        return cache.addAll([
-          '/recyclingdictionary/search.html',
-          '/recyclingdictionary/result.html'
-        ]);
-      })
-    );
-  });
 
 // Register a route with caching strategy
 workbox.routing.registerRoute(
-    ({ url }) => url.pathname === '/recyclingdictionary/search.html' || url.pathname === '/recyclingdictionary/result.html',
-    new workbox.strategies.StaleWhileRevalidate({
-        cacheName: 'result-cache',
-        plugins: [
-            new workbox.cacheableResponse.CacheableResponsePlugin({
-                statuses: [200],
-            }),
-            {
-                cacheKeyWillBeUsed,
-            },
-        ],
-    })
+  ({ url }) => url.pathname === '/recyclingdictionary/' || 
+  url.pathname === '/recyclingdictionary/index.html' || 
+  url.pathname === '/recyclingdictionary/homepage.css' ||
+  url.pathname === '/recyclingdictionary/homepage.js' ||
+  url.pathname === '/recyclingdictionary/recyclingitems.json',
+  new workbox.strategies.StaleWhileRevalidate({
+      cacheName: 'general-cache',
+      plugins: [
+          new workbox.cacheableResponse.CacheableResponsePlugin({
+              statuses: [200],
+          })
+      ],
+  })
+);
+workbox.routing.registerRoute(
+  ({ url }) => url.pathname === '/recyclingdictionary/search.html' || url.pathname === '/recyclingdictionary/result.html',
+  new workbox.strategies.StaleWhileRevalidate({
+      cacheName: 'result-cache',
+      plugins: [
+          new workbox.cacheableResponse.CacheableResponsePlugin({
+              statuses: [200],
+          }),
+          {
+              cacheKeyWillBeUsed,
+          },
+      ],
+  })
 );
