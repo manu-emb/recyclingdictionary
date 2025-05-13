@@ -32,6 +32,9 @@
             textbox.addEventListener('focus', () => {
                 logo.style.display = "none"; 
                 games.style.display = "none"; 
+                //scroll to the top to prevent search bar from getting out of view
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             });
 
             textbox.addEventListener('blur', () => {
