@@ -11,7 +11,10 @@
         <p id="logo"><b><span style="color:rgb(95, 93, 93);">Recycling</span><span style="color:rgb(99, 101, 246);">Dictionary</span></b>&nbsp;<span style="font-size: 12px; color:rgb(95, 93, 93);">Winnipeg</span></p> 
         <form action="./search.html">
             <!--search box-->
-            <input id="textBox" type="text" name="q" autocomplete="off" onkeyup="search(true)" onclick="document.getElementById('textBox').blur()">
+            <input id="textBox" type="text" name="q" autocomplete="off" onkeyup="search(true)" onclick="
+            if (innerWidth / innerHeight <= 0.99){
+                document.getElementById('textBox').blur()
+            }">
         </form>
         <div id="list" class="home"></div>
         <button id="linkToGames" onclick= "window.location.href = 'games.html'">Games</button>
@@ -29,18 +32,16 @@
         
         console.log(innerWidth / innerHeight)
             document.addEventListener('click', function(event) {
-                    if (innerWidth / innerHeight <= 0.99){
-                    // Check if the target element is the search box or the list items
-                    let isClickOnTextbox = event.target == document.getElementById("textBox") 
-                    let isClickOnListItems = document.getElementById("list").contains(event.target);
-                    if (isClickOnTextbox) {
-                        logo.style.display = "none"; 
-                        games.style.display = "none";
-                        textbox.focus(); 
-                    } else if (!isClickOnTextbox && !isClickOnListItems){
-                        logo.style.display = "block"; 
-                        games.style.display = "block"; 
-                    }
+                // Check if the target element is the search box or the list items
+                let isClickOnTextbox = event.target == document.getElementById("textBox") 
+                let isClickOnListItems = document.getElementById("list").contains(event.target);
+                if (isClickOnTextbox && innerWidth / innerHeight <= 0.99) {
+                    logo.style.display = "none"; 
+                    games.style.display = "none";
+                    textbox.focus(); 
+                } else if (!isClickOnTextbox && !isClickOnListItems){
+                    logo.style.display = "block"; 
+                    games.style.display = "block"; 
                 }
             });
     </script>
