@@ -1,0 +1,15 @@
+{
+  "short_name": "RD",
+  "name": "RecyclingDictionary",
+  "icons": [
+    {
+      "src": "/recyclingdictionary/recyclingicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/recyclingdictionary/",
+  "display": "fullscreen",
+  "theme_color": "rgb(99, 101, 246)",
+  "background_color": "white"
+}
