@@ -16,18 +16,22 @@ function search(isTextBox){
         input = document.getElementById("query").innerText;
     }
     input = input.toLowerCase()
-
+    searchTerm = input.split(" ").map(term => term.trim()).filter(term => term !== "" && term !== "and" && term !== "of" && term !== "the");
     //check input
     let noResults = true; 
     let limit = 8; //limit for search results
     let resultCounter = 0;
     for (i = 0; i < listItems.length; i++){
-        if (!listItems[i].innerHTML.toLowerCase().includes(input) || input === "") {
+        // Check if any of the search terms are present in the name or alias
+        let matches = searchTerm.every(term => 
+            listItems[i].dataset.alias.toLowerCase().includes(term)
+        );
+        if (!matches || input === "") {
             listItems[i].style.display = "none";
             continue
         } else if (resultCounter < limit | !isTextBox){
             listItems[i].style.display = "flex";
-            noResults = false; 
+            noResults = false;
             resultCounter++;
             console.log(resultCounter);
         }
@@ -48,6 +52,11 @@ function loadSearchData(preview) {
             searchItems.forEach((item)=>{
                 let b = document.createElement("button");
                 b.innerText = item.name;
+                if (item.alias == null){
+                    b.dataset.alias = item.name;
+                } else {
+                    b.dataset.alias = item.alias;
+                }
                 //initialize with not being displayed
                 b.style.display = "none";
                 //add the class name

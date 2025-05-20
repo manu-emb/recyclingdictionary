@@ -4,267 +4,228 @@
         "identifier": "aluminumcans",
         "group": "Aluminum and Steel",
         "canRecycle": true,
-        "alias": "Aluminum Cans"
+        "alias": "aluminum cans pepsi coca cola coke sprite canada dry ginger ale fanta crush root beer"
     },
     {
         "name": "Batteries",
         "identifier": "batteries",
-        "canRecycle": false,
-        "alias": "Batteries"
+        "canRecycle": false
     },
     {
         "name": "Book",
         "identifier": "book",
-        "canRecycle": false,
-        "alias": "Book"
+        "canRecycle": false
     },
     {
         "name": "Cardboard",
         "identifier": "cardboard",
         "group": "Cardboard and Boxboard",
-        "canRecycle": true,
-        "alias": "Cardboard"
+        "canRecycle": true
     },
     {
         "name": "Electronics",
         "identifier": "electronics",
-        "canRecycle": false,
-        "alias": "Electronics"
+        "canRecycle": false
     },
     {
         "name": "Food Waste",
         "identifier": "foodwaste",
-        "canRecycle": false,
-        "alias": "Food Waste"
+        "canRecycle": false
     },
     {
         "name": "Metal Can",
         "identifier": "metalcan",
-        "canRecycle": true,
-        "alias": "Metal Can"
+        "canRecycle": true
     },
     {
         "name": "Paper",
         "identifier": "paper",
-        "canRecycle": true,
-        "alias": "Paper"
+        "canRecycle": true
     },
     {
         "name": "Paper Cup",
         "identifier": "papercup",
-        "canRecycle": true,
-        "alias": "Paper Cup"
+        "canRecycle": true
     },
     {
         "name": "Plastic Bag",
         "identifier": "plasticbag",
-        "canRecycle": false,
-        "alias": "Plastic Bag"
+        "canRecycle": false
     },
     {
         "name": "Plastic Bottle",
         "identifier": "plasticbottle",
-        "canRecycle": true,
-        "alias": "Plastic Bottle"
+        "canRecycle": true
     },
     {
         "name": "Plastic Cup",
         "identifier": "plasticcup",
-        "canRecycle": true,
-        "alias": "Plastic Cup"
+        "canRecycle": true
     },
     {
         "name": "Styrofoam",
         "identifier": "styrofoam",
-        "canRecycle": false,
-        "alias": "Styrofoam"
+        "canRecycle": false
     },
     {
         "name": "Textiles",
         "identifier": "textiles",
-        "canRecycle": false,
-        "alias": "Textiles"
+        "canRecycle": false
     },
     {
         "name": "Tires",
         "identifier": "tires",
-        "canRecycle": false,
-        "alias": "Tires"
+        "canRecycle": false
     },
     {
         "name": "Food and Beverage Cans",
         "identifier": "foodandbeveragecans",
         "group": "Aluminum and Steel",
-        "canRecycle": true,
-        "alias": "Food and Beverage Cans"
+        "canRecycle": true
     },
     {
         "name": "Coffee Cans",
         "identifier": "coffeecans",
         "group": "Aluminum and Steel",
-        "canRecycle": true,
-        "alias": "Coffee Cans"
+        "canRecycle": true
     },
     {
         "name": "Tuna Cans",
         "identifier": "tunacans",
         "group": "Aluminum and Steel",
-        "canRecycle": true,
-        "alias": "Tuna Cans"
+        "canRecycle": true
     },
     {
         "name": "Soft Drink Cans",
         "identifier": "softdrinkcans",
         "group": "Aluminum and Steel",
-        "canRecycle": true,
-        "alias": "Soft Drink Cans"
+        "canRecycle": true
     },
     {
         "name": "Soup Cans",
         "identifier": "soupcans",
         "group": "Aluminum and Steel",
-        "canRecycle": true,
-        "alias": "Soup Cans"
+        "canRecycle": true
     },
     {
         "name": "Sauce Cans",
         "identifier": "saucecans",
         "group": "Aluminum and Steel",
-        "canRecycle": true,
-        "alias": "Sauce Cans"
+        "canRecycle": true
     },
     {
         "name": "Pet Food Cans",
         "identifier": "petfoodcans",
         "group": "Aluminum and Steel",
-        "canRecycle": true,
-        "alias": "Pet Food Cans"
+        "canRecycle": true
     },
     {
         "name": "Cookie Tin Containers",
         "identifier": "cookietincontainers",
         "group": "Aluminum and Steel",
-        "canRecycle": true,
-        "alias": "Cookie Tin Containers"
+        "canRecycle": true
     },
     {
         "name": "Pots",
         "identifier": "pots",
         "group": "Aluminum and Steel",
-        "canRecycle": false,
-        "alias": "Pots"
+        "canRecycle": false
     },
     {
         "name": "Pans",
         "identifier": "pans",
         "group": "Aluminum and Steel",
-        "canRecycle": false,
-        "alias": "Pans"
+        "canRecycle": false
     },
     {
         "name": "Baking Trays",
         "identifier": "bakingtrays",
         "group": "Aluminum and Steel",
-        "canRecycle": false,
-        "alias": "Baking Trays"
+        "canRecycle": false
     },
     {
         "name": "Aluminum Foil",
         "identifier": "aluminumfoil",
         "group": "Aluminum and Steel",
-        "canRecycle": false,
-        "alias": "Aluminum Foil"
+        "canRecycle": false
     },
     {
         "name": "Aluminum Trays",
         "identifier": "aluminumtrays",
         "group": "Aluminum and Steel",
-        "canRecycle": false,
-        "alias": "Aluminum Trays"
+        "canRecycle": false
     },
     {
         "name": "Aluminum Pie Plates",
         "identifier": "aluminumpieplates",
         "group": "Aluminum and Steel",
-        "canRecycle": false,
-        "alias": "Aluminum Pie Plates"
+        "canRecycle": false
     },
     {
         "name": "Aerosol/Spray Cans",
         "identifier": "aerosolspraycans",
         "group": "Aluminum and Steel",
-        "canRecycle": false,
-        "alias": "Aerosol/Spray Cans"
+        "canRecycle": false
     },
     {
         "name": "Foil-lined Cardboard Take-out Containers and Lids",
         "identifier": "foilcardboardtakeoutcontainerslids",
         "group": "Aluminum and Steel",
-        "canRecycle": false,
-        "alias": "Foil-lined Cardboard Take-out Containers and Lids"
+        "canRecycle": false
     },
     {
         "name": "Electronics",
         "identifier": "electronics",
         "group": "Aluminum and Steel",
-        "canRecycle": false,
-        "alias": "Electronics"
+        "canRecycle": false
     },
     {
         "name": "Appliances",
         "identifier": "appliances",
         "group": "Aluminum and Steel",
-        "canRecycle": false,
-        "alias": "Appliances"
+        "canRecycle": false
     },
     {
         "name": "Metal Toys",
         "identifier": "metaltoys",
         "group": "Aluminum and Steel",
-        "canRecycle": false,
-        "alias": "Metal Toys"
+        "canRecycle": false
     },
     {
         "name": "Wire Coat Hangers",
         "identifier": "wirecoathangers",
         "group": "Aluminum and Steel",
-        "canRecycle": false,
-        "alias": "Wire Coat Hangers"
+        "canRecycle": false
     },
     {
         "name": "Scrap Metal",
         "identifier": "scrapmetal",
         "group": "Aluminum and Steel",
-        "canRecycle": false,
-        "alias": "Scrap Metal"
+        "canRecycle": false
     },
     {
         "name": "Paint Cans",
         "identifier": "paintcans",
         "group": "Aluminum and Steel",
-        "canRecycle": false,
-        "alias": "Paint Cans"
+        "canRecycle": false
     },
     {
         "name": "Gas Cylinders (Propane, Butane, etc.)",
         "identifier": "gascylinders",
         "group": "Aluminum and Steel",
-        "canRecycle": false,
-        "alias": "Gas Cylinders (Propane, Butane, etc.)"
+        "canRecycle": false
     },
     {
         "name": "Cardboard Boxes",
         "identifier": "cardboardboxes",
         "group": "Cardboard and Boxboard",
-        "canRecycle": true,
-        "alias": "Cardboard Boxes"
+        "canRecycle": true
     },
     {
         "name": "Boxboard",
         "identifier": "boxboard",
         "group": "Cardboard and Boxboard",
-        "canRecycle": true,
-        "alias": "Boxboard"
+        "canRecycle": true
     },
     {
         "name": "Pizza Boxes",
@@ -272,286 +233,234 @@
         "group": "Cardboard and Boxboard",
         "canRecycle": true,
         "note": "Must have minimal grease and food residue",
-        "alias": "Pizza Boxes"
+        "alias": "Pizza boxes greasy minimal food residue"
     },
     {
         "name": "Cereal Boxes",
         "identifier": "cerealboxes",
         "group": "Cardboard and Boxboard",
-        "canRecycle": true,
-        "alias": "Cereal Boxes"
+        "canRecycle": true
     },
     {
         "name": "Shoe Boxes",
         "identifier": "shoeboxes",
         "group": "Cardboard and Boxboard",
-        "canRecycle": true,
-        "alias": "Shoe Boxes"
+        "canRecycle": true
     },
     {
         "name": "Box Inserts",
         "identifier": "boxinserts",
         "group": "Cardboard and Boxboard",
-        "canRecycle": true,
-        "alias": "Box Inserts"
+        "canRecycle": true
     },
     {
         "name": "Egg Cartons",
         "identifier": "eggcartons",
         "group": "Cardboard and Boxboard",
-        "canRecycle": true,
-        "alias": "Egg Cartons"
+        "canRecycle": true
     },
     {
         "name": "Cardboard Drink Trays",
         "identifier": "cardboarddrinktrays",
         "group": "Cardboard and Boxboard",
-        "canRecycle": true,
-        "alias": "Cardboard Drink Trays"
+        "canRecycle": true
     },
     {
         "name": "Tissue Paper Boxes",
         "identifier": "tissuepaperboxes",
         "group": "Cardboard and Boxboard",
-        "canRecycle": true,
-        "alias": "Tissue Paper Boxes"
+        "canRecycle": true
     },
     {
         "name": "Empty Toilet Paper and Paper Towel Rolls",
         "identifier": "emptytoiletpaperpapertowelrolls",
         "group": "Cardboard and Boxboard",
-        "canRecycle": true,
-        "alias": "Empty Toilet Paper and Paper Towel Rolls"
+        "canRecycle": true
     },
     {
         "name": "Take-Out Beverage Trays",
         "identifier": "takeoutbeveragetrays",
         "group": "Cardboard and Boxboard",
-        "canRecycle": true,
-        "alias": "Take-Out Beverage Trays"
-    },
-    {
-        "name": "Pizza Boxes (Greasy)",
-        "identifier": "pizzaboxesgreasy",
-        "group": "Cardboard and Boxboard",
-        "canRecycle": false,
-        "alias": "Pizza Boxes (Greasy)"
-    },
-    {
-        "name": "Pizza Boxes (Minimal food residue)",
-        "identifier": "pizzaboxesminimalfoodresidue",
-        "group": "Cardboard and Boxboard",
-        "canRecycle": true,
-        "alias": "Pizza Boxes (Minimal food residue)"
+        "canRecycle": true
     },
     {
         "name": "Aseptic Cartons",
         "identifier": "asepticcartons",
         "group": "Cartons",
-        "canRecycle": true,
-        "alias": "Aseptic Cartons"
+        "canRecycle": true
     },
     {
         "name": "Gable Top Cartons",
         "identifier": "gabletopcartons",
         "group": "Cartons",
-        "canRecycle": true,
-        "alias": "Gable Top Cartons"
+        "canRecycle": true
     },
     {
         "name": "Juice Boxes",
         "identifier": "juiceboxes",
         "group": "Cartons",
-        "canRecycle": true,
-        "alias": "Juice Boxes"
+        "canRecycle": true
     },
     {
         "name": "Milk Cartons",
         "identifier": "milkcartons",
         "group": "Cartons",
-        "canRecycle": true,
-        "alias": "Milk Cartons"
+        "canRecycle": true
     },
     {
         "name": "Soup Cartons",
         "identifier": "soupcartons",
         "group": "Cartons",
-        "canRecycle": true,
-        "alias": "Soup Cartons"
+        "canRecycle": true
     },
     {
         "name": "Juice Cartons",
         "identifier": "juicecartons",
         "group": "Cartons",
-        "canRecycle": true,
-        "alias": "Juice Cartons"
+        "canRecycle": true
     },
     {
         "name": "Frozen Dessert Boxes",
         "identifier": "frozendessertboxes",
         "group": "Cartons",
-        "canRecycle": true,
-        "alias": "Frozen Dessert Boxes"
+        "canRecycle": true
     },
     {
         "name": "Frozen Ice Cream Cartons",
         "identifier": "frozenicecreamcartons",
         "group": "Cartons",
-        "canRecycle": true,
-        "alias": "Frozen Ice Cream Cartons"
+        "canRecycle": true
     },
     {
         "name": "Frozen Yogurt Cartons",
         "identifier": "frozenyogurtcartons",
         "group": "Cartons",
-        "canRecycle": true,
-        "alias": "Frozen Yogurt Cartons"
+        "canRecycle": true
     },
     {
         "name": "Food and Drink Pouches",
         "identifier": "foodanddrinkpouches",
         "group": "Cartons",
-        "canRecycle": false,
-        "alias": "Food and Drink Pouches"
+        "canRecycle": false
     },
     {
         "name": "Paper Straws",
         "identifier": "paperstraws",
         "group": "Cartons",
-        "canRecycle": false,
-        "alias": "Paper Straws"
+        "canRecycle": false
     },
     {
         "name": "Plastic Straws",
         "identifier": "plasticstraws",
         "group": "Cartons",
-        "canRecycle": false,
-        "alias": "Plastic Straws"
-    },
+        "canRecycle": false
+    }, 
     {
         "name": "Glass Jars",
         "identifier": "glassjars",
         "group": "Glass",
-        "canRecycle": true,
-        "alias": "Glass Jars"
+        "canRecycle": true
     },
     {
         "name": "Glass Bottles",
         "identifier": "glassbottles",
         "group": "Glass",
-        "canRecycle": true,
-        "alias": "Glass Bottles"
+        "canRecycle": true
     },
     {
         "name": "Glass Containers",
         "identifier": "glasscontainers",
         "group": "Glass",
-        "canRecycle": true,
-        "alias": "Glass Containers"
+        "canRecycle": true
     },
     {
         "name": "Glass Food and Beverage Containers",
         "identifier": "glassfoodandbeveragecontainers",
         "group": "Glass",
-        "canRecycle": true,
-        "alias": "Glass Food and Beverage Containers"
+        "canRecycle": true
     },
     {
         "name": "Salsa Jars",
         "identifier": "salsajars",
         "group": "Glass",
-        "canRecycle": true,
-        "alias": "Salsa Jars"
+        "canRecycle": true
     },
     {
         "name": "Olive Oil Bottles",
         "identifier": "oliveoilbottles",
         "group": "Glass",
-        "canRecycle": true,
-        "alias": "Olive Oil Bottles"
+        "canRecycle": true
     },
     {
         "name": "Juice Bottles",
         "identifier": "juicebottles",
         "group": "Glass",
-        "canRecycle": true,
-        "alias": "Juice Bottles"
+        "canRecycle": true
     },
     {
         "name": "Hard Liquor and Wine Bottles",
         "identifier": "hardliquorandwinebottles",
         "group": "Glass",
-        "canRecycle": true,
-        "alias": "Hard Liquor and Wine Bottles"
+        "canRecycle": true
     },
     {
         "name": "Cosmetic Containers",
         "identifier": "cosmeticcontainers",
         "group": "Glass",
-        "canRecycle": true,
-        "alias": "Cosmetic Containers"
+        "canRecycle": true
     },
     {
         "name": "Perfume Bottles",
         "identifier": "perfumebottles",
         "group": "Glass",
-        "canRecycle": true,
-        "alias": "Perfume Bottles"
+        "canRecycle": true
     },
     {
         "name": "Drinking Glasses",
         "identifier": "drinkingglasses",
         "group": "Glass",
-        "canRecycle": false,
-        "alias": "Drinking Glasses"
+        "canRecycle": false
     },
     {
         "name": "Glass Cookware",
         "identifier": "glasscookware",
         "group": "Glass",
-        "canRecycle": false,
-        "alias": "Glass Cookware"
+        "canRecycle": false
     },
     {
         "name": "Ceramics",
         "identifier": "ceramics",
         "group": "Glass",
-        "canRecycle": false,
-        "alias": "Ceramics"
+        "canRecycle": false
     },
     {
         "name": "Porcelain",
         "identifier": "porcelain",
         "group": "Glass",
-        "canRecycle": false,
-        "alias": "Porcelain"
+        "canRecycle": false
     },
     {
         "name": "Broken Glass",
         "identifier": "brokenglass",
         "group": "Glass",
-        "canRecycle": false,
-        "alias": "Broken Glass"
+        "canRecycle": false
     },
     {
         "name": "Mirrors",
         "identifier": "mirrors",
         "group": "Glass",
-        "canRecycle": false,
-        "alias": "Mirrors"
+        "canRecycle": false
     },
     {
         "name": "Light Bulbs",
         "identifier": "lightbulbs",
         "group": "Glass",
-        "canRecycle": false,
-        "alias": "Light Bulbs"
+        "canRecycle": false
     },
     {
         "name": "Automotive Glass",
         "identifier": "automotiveglass",
         "group": "Glass",
-        "canRecycle": false,
-        "alias": "Automotive Glass"
+        "canRecycle": false
     }
 ]
