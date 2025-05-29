@@ -21,11 +21,11 @@ self.addEventListener('install', (event) => {
     })      
   );
 });
-
+/* image caching being reworked
 workbox.routing.registerRoute(
     ({request}) => request.destination === 'image',
     new workbox.strategies.CacheFirst()
-);
+);*/
 // Function to create a cache key without specific query parameters
 const cacheKeyWillBeUsed = ({ request }) => {
     const url = new URL(request.url);

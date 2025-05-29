@@ -10,7 +10,7 @@
     <div class="container">
         <p class="logoResult"><b><span style="color:rgb(95, 93, 93);">Recycling</span><span style="color:rgb(99, 101, 246);">Dictionary</span></b> <span style="font-size: 12px; color:rgb(95, 93, 93);">Winnipeg</span></p> 
         <p id="title">Loading item...</p>
-        <img id="img" src="" width="150" height="150">
+        <img id="img" src="" style="max-width: 80vw" height="200">
         <p id="recycling-status"></p>
         <p id="recycling-notes"></p>
     </div>
@@ -34,7 +34,27 @@
             }
             if (itemIndex !== null){
                 document.getElementById("title").innerText = searchItems[itemIndex].name;
-                document.getElementById("img").src = `images/${searchItems[itemIndex].identifier}.png`
+                //get image (png or jpg)
+                const img = document.getElementById("img")
+                fetch(`images/${searchItems[itemIndex].identifier}.png`)
+                    .then((response) => {
+                        if (response.ok) {
+                            img.src = `images/${searchItems[itemIndex].identifier}.png`;
+                        } else {
+                            fetch(`images/${searchItems[itemIndex].identifier}.jpg`)
+                                .then((response) => {
+                                    if (response.ok) {
+                                        img.src = `images/${searchItems[itemIndex].identifier}.jpg`;
+                                    } else{
+                                        //show the placeholder image if no image is found
+                                        img.src = 'placeholderimage.jpg';
+                                    }
+                                })
+                        }
+                    })
+                    .catch((error) => {
+                        console.log('There was an error with the request')
+                    })
                 if (searchItems[itemIndex].canRecycle == true){
                     document.getElementById("recycling-status").innerHTML = "<span style=\"color:green\">✔ Item is recyclable</span>";
                 }

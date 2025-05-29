@@ -40,12 +40,14 @@
     {
         "name": "Paper",
         "identifier": "paper",
-        "canRecycle": true
+        "canRecycle": true,
+        "note" : "Plain and printed paper is accepted. Paper with crayon, paint, ribbon, foil, or sparkles is not accepted.",
+        "alias" : "plain office printed paper"
     },
     {
         "name": "Paper Cup",
         "identifier": "papercup",
-        "canRecycle": true
+        "canRecycle": false
     },
     {
         "name": "Plastic Bag",
