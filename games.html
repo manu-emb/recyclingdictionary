@@ -12,20 +12,24 @@
             align-items: center;
             justify-content: center;
         }
-        div {
-            width: 400px;
-            height: 100px;
+        #whatgoeswhere {
+            width: auto;
+            height: auto;
             margin-top: calc(50vh - 100px);
             background-color: cyan;
             text-align: center;
-            line-height: 100px;
+            line-height: 9vh;
             font-size: 30px;
             border-radius: 12px;
             cursor: pointer;
+            padding: 50px;
+        }
+        #whatgoeswhere:hover{
+            background-color: rgb(3, 212, 212);
         }
     </style>
 </head>
 <body>
-    <div onclick= "window.location.href = 'whatgoeswhere.html'">What goes where?</div>
+    <div id="whatgoeswhere" onclick= "window.location.href = 'whatgoeswhere.html'">What goes where?</div>
 </body>
 </html>

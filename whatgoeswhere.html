@@ -5,31 +5,250 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>What goes where?</title>
     <style>
+        .container{
+            font-family: "Open Sans";
+        }
+        #imageItem {
+            max-width: 80vw;
+            height: 200px;
+            margin:auto;
+        }
         #recycle {
             position: absolute;
-            bottom: 4px;
-            left: 4px;
-            height: 100px;
-            width: 100px;
+            bottom: 2vh;
+            left: 2vw;
+            height: 10vh;
+            width: 20vw;
             background-color: blue;
+            color: whitesmoke;
+            font-size: 20px;
         }
         #garbage {
             position: absolute;
-            bottom: 4px;
-            right: 4px;
-            height: 100px;
-            width: 100px;
+            bottom: 2vh;
+            right: 2vw;
+            height: 10vh;
+            width: 20vw;
             background-color: green;
+            color: whitesmoke;
+            font-size: 20px;    
+        }
+        #viewSrc {
+            display: none;
+            position: absolute;
+            bottom: 2vh;
+            left: 2vw;
+            height: 10vh;
+            width: 20vw;
+            background-color: rgb(99, 101, 246);
+            color: whitesmoke;
+            font-size: 20px;
+        }
+        #continueGame {
+            display: none;
+            position: absolute;
+            bottom: 2vh;
+            right: 2vw;
+            height: 10vh;
+            width: 20vw;
+            background-color: green;
+            color: whitesmoke;
+            font-size: 20px;
+            border-color: lightgreen;
+            border-width: 10px;
+        }
+        @media only screen and (min-width: 510px) {
+            #recycle {
+                min-width: 200px;
+            }
+            #garbage {
+                min-width: 200px;
+            }
+            #continueGame {
+                min-width: 200px;
+            }
+            #viewSrc{
+                min-width: 200px;
+            }
+        }
+        @media only screen and (max-width: 510px) {
+            #recycle {
+                width: 40vw;
+            }
+            #garbage {
+                width: 40vw;
+            }
+            #continueGame {
+                width: 40vw;
+            }
+            #viewSrc{
+                width: 40vw;
+            }
+        }
+        #main-text{
+            margin-top: 5vh;
+            font-size: calc(15px + 2vw);   
+        }
+        #stat-text{
+            position: absolute;
+            right: 20px;
+            top: 15vh;
+            font-size: calc(10px + 0.5vw)
+        }
+        #result-text{
+            display: none;
+            position: absolute;
+            bottom: 15vh;
+            font-size: 20px;
+            text-align: center;
+        }
+        #imageItem{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
         }
     </style>
+    <link rel="stylesheet" href="./homepage.css"> 
 </head>
 <body>
-    <img>
-    <button id="recycle">
-        <img href="">
-    </button>
-    <button id="garbage">
-        <img href="">
-    </button>
+    <div class="container">
+        <p id="stat-text">
+            Items left: 0<br>
+            Correct: 0<br>
+            Incorrect: 0
+        </p>
+        <p id="main-text">Where does this item go?</p>
+        <img id="imageItem" href="">
+        <button id="recycle" onclick="recycle()">
+            Recycle Bin
+        </button>
+        <button id="garbage" onclick="garbage()">
+            Garbage Bin
+        <button id="viewSrc" onclick="viewSrc()">
+            View item entry ↗
+        </button>
+        <button id="continueGame" onclick="continueGame()">
+            Continue
+        </button>
+        <p id="result-text">You are incorrect. It is not recyclable! <br>
+        <span style="color: gray;">Click anywhere to continue</span></p>
+    </div>
 </body>
+<script>
+    let images = null;
+    let recyclingItems = null;
+    let points = 0;
+    let index = 0;
+    let gotCorrect = 0;
+    let gotIncorrect = 0;
+    const btnRecycle = document.getElementById("recycle");
+    const btnGarbage = document.getElementById("garbage");
+    const btnContinue = document.getElementById("continueGame");
+    const resultText = document.getElementById("result-text");
+    const btnViewSrc = document.getElementById("viewSrc");
+    fetch("imageslist.json")
+        .then(response => response.json())
+        .then(data => {
+            images = data;
+            if (recyclingItems != null){
+                loadQuestion();
+            }
+        })
+    fetch("recyclingitems.json")
+        .then(response => response.json())
+        .then(data => {
+            recyclingItems = data;
+            console.log(recyclingItems)
+            if (images != null){
+                loadQuestion();
+            }
+        })
+    function loadQuestion(){
+        //show buttons
+        btnRecycle.style.display = "block";
+        btnGarbage.style.display = "block";
+        //load image
+        document.getElementById("imageItem").src = "images/" + images[index]
+        document.getElementById("stat-text").innerHTML = `Items left: ${images.length - index}<br>
+            Correct: ${gotCorrect}<br>
+            Incorrect: ${gotIncorrect}`
+    }
+    function loadResult(isCorrect, recyclingBool){
+        //hide buttons
+        btnRecycle.style.display = "none";
+        btnGarbage.style.display = "none";
+
+        //determine text
+        let verifyText = "";
+        let answerText = "";
+        if (isCorrect) {
+            verifyText = "correct";
+            resultText.style.color = "green";
+            //if you are correct, the answer match your choice
+            if (recyclingBool){
+                answerText = "recyclable";
+            } else {
+                answerText = "not recyclable";
+            }
+        } else {
+            verifyText = "incorrect";
+            resultText.style.color = "red";
+            if (recyclingBool){
+                answerText = "not recyclable";
+            } else {
+                answerText = "recyclable";
+            }
+        }
+        resultText.innerHTML = `You are ${verifyText}. It is ${answerText}!`;
+        //show elements
+        resultText.style.display = "block";
+        btnContinue.style.display = "block";
+        btnViewSrc.style.display = "block";
+    }
+    function recycle(){
+        isCorrect = checkAnswer(true);
+        console.log("Recycle clicked! " + isCorrect)
+        
+        loadResult(isCorrect, true);
+    }
+    function garbage(){
+        isCorrect = checkAnswer(false);
+        console.log("Garbage clicked! " + isCorrect)
+        loadResult(isCorrect, false);
+    }
+    function viewSrc(){
+        window.open(`result.html?q=${images[index].split('.')[0]}`, '_blank').focus();
+    }
+    function continueGame(){
+        resultText.style.display = "none";
+        btnContinue.style.display = "none";
+        btnViewSrc.style.display = "none";
+        index++;
+        loadQuestion();
+    }
+    function checkAnswer(recyclingBool){
+        let identifier = images[index].split('.')[0] //extract the first part of the file name
+        //get index of item in the list
+        let itemIndex = null;
+        for(i = 0; i < recyclingItems.length; i++){
+            if (recyclingItems[i].identifier == identifier){
+                itemIndex = i;
+                break;
+            }
+        }
+        if (itemIndex != null){
+            if (recyclingItems[itemIndex].canRecycle == recyclingBool){
+                gotCorrect++;
+                return true;
+            }
+            else {
+                gotIncorrect++;
+                return false;
+            }
+        }
+    }
+</script>
 </html>
