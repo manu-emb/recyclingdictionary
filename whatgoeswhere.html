@@ -11,78 +11,71 @@
         #imageItem {
             max-width: 80vw;
             height: 200px;
-            margin:auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
         }
         #recycle {
-            position: absolute;
             bottom: 2vh;
             left: 2vw;
-            height: 10vh;
-            width: 20vw;
             background-color: blue;
             color: whitesmoke;
-            font-size: 20px;
+            
         }
         #garbage {
-            position: absolute;
             bottom: 2vh;
             right: 2vw;
-            height: 10vh;
-            width: 20vw;
             background-color: green;
-            color: whitesmoke;
-            font-size: 20px;    
+            color: whitesmoke; 
         }
         #viewSrc {
             display: none;
-            position: absolute;
             bottom: 2vh;
             left: 2vw;
-            height: 10vh;
-            width: 20vw;
             background-color: rgb(99, 101, 246);
             color: whitesmoke;
-            font-size: 20px;
         }
         #continueGame {
             display: none;
-            position: absolute;
             bottom: 2vh;
             right: 2vw;
-            height: 10vh;
-            width: 20vw;
             background-color: green;
             color: whitesmoke;
-            font-size: 20px;
             border-color: lightgreen;
             border-width: 10px;
         }
+        #retryGame {
+            display: none;
+            bottom: 8vh;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background-color: rgb(99, 101, 246);
+            color: whitesmoke;
+        }
+        .buttons {
+            position: absolute;
+            height: 10vh;
+            width: 20vw;
+            font-size: 20px;
+            touch-action: manipulation;
+        }
         @media only screen and (min-width: 510px) {
-            #recycle {
-                min-width: 200px;
-            }
-            #garbage {
-                min-width: 200px;
-            }
-            #continueGame {
-                min-width: 200px;
-            }
-            #viewSrc{
+            .buttons {
                 min-width: 200px;
             }
         }
         @media only screen and (max-width: 510px) {
-            #recycle {
+            .buttons {
                 width: 40vw;
             }
-            #garbage {
-                width: 40vw;
-            }
-            #continueGame {
-                width: 40vw;
-            }
-            #viewSrc{
-                width: 40vw;
+        }
+        @media only screen and (max-height: 400px) {
+            #imageItem{
+                height: 50vh;
             }
         }
         #main-text{
@@ -102,13 +95,15 @@
             font-size: 20px;
             text-align: center;
         }
-        #imageItem{
+        #end-text{
+            display: none;
+            margin: 0;
             position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
+            top: 40%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            font-size: 20px;
         }
     </style>
     <link rel="stylesheet" href="./homepage.css"> 
@@ -121,16 +116,20 @@
             Incorrect: 0
         </p>
         <p id="main-text">Where does this item go?</p>
+        <p id="end-text">Good job! You got 0/0 correct</p>
+        <button id="retryGame" class="buttons" onclick="location.reload();">
+            Retry
+        </button>
         <img id="imageItem" href="">
-        <button id="recycle" onclick="recycle()">
+        <button id="recycle" class="buttons" onclick="recycle()">
             Recycle Bin
         </button>
-        <button id="garbage" onclick="garbage()">
+        <button id="garbage" class="buttons" onclick="garbage()">
             Garbage Bin
-        <button id="viewSrc" onclick="viewSrc()">
+        <button id="viewSrc" class="buttons" onclick="viewSrc()">
             View item entry ↗
         </button>
-        <button id="continueGame" onclick="continueGame()">
+        <button id="continueGame" class="buttons" onclick="continueGame()">
             Continue
         </button>
         <p id="result-text">You are incorrect. It is not recyclable! <br>
@@ -149,10 +148,18 @@
     const btnContinue = document.getElementById("continueGame");
     const resultText = document.getElementById("result-text");
     const btnViewSrc = document.getElementById("viewSrc");
+    const imgItem = document.getElementById("imageItem");
+    const txtStat = document.getElementById("stat-text");
+    const txtEnd = document.getElementById("end-text");
     fetch("imageslist.json")
         .then(response => response.json())
         .then(data => {
             images = data;
+            //randomize
+            images = images
+                .map(value => ({ value, sort: Math.random() }))
+                .sort((a, b) => a.sort - b.sort)
+                .map(({value}) => value)
             if (recyclingItems != null){
                 loadQuestion();
             }
@@ -171,8 +178,8 @@
         btnRecycle.style.display = "block";
         btnGarbage.style.display = "block";
         //load image
-        document.getElementById("imageItem").src = "images/" + images[index]
-        document.getElementById("stat-text").innerHTML = `Items left: ${images.length - index}<br>
+        imgItem.src = "images/" + images[index]
+        txtStat.innerHTML = `Items left: ${images.length - index}<br>
             Correct: ${gotCorrect}<br>
             Incorrect: ${gotIncorrect}`
     }
@@ -211,7 +218,6 @@
     function recycle(){
         isCorrect = checkAnswer(true);
         console.log("Recycle clicked! " + isCorrect)
-        
         loadResult(isCorrect, true);
     }
     function garbage(){
@@ -227,7 +233,11 @@
         btnContinue.style.display = "none";
         btnViewSrc.style.display = "none";
         index++;
-        loadQuestion();
+        if (images[index] == null){
+            endGame();
+        } else {
+            loadQuestion();
+        }
     }
     function checkAnswer(recyclingBool){
         let identifier = images[index].split('.')[0] //extract the first part of the file name
@@ -249,6 +259,22 @@
                 return false;
             }
         }
+    }
+    function endGame(){
+        document.getElementById("main-text").style.display = "none";
+        imgItem.style.display = "none";
+        txtStat.style.display = "none";
+        txtEnd.style.display = "block";
+        let result = `${gotCorrect}/${images.length}`
+        let scoreRatio = gotCorrect/images.length
+        if (scoreRatio < 0.5){
+            txtEnd.innerHTML = `Nice try! You got ${result} correct.`
+        } else if (scoreRatio >= 0.5 && scoreRatio < 1){
+            txtEnd.innerHTML = `Good job! You got ${result} correct.`
+        } else {
+            txtEnd.innerHTML = `Perfect! You got ${result} correct.` 
+        }
+        document.getElementById("retryGame").style.display = "block";
     }
 </script>
 </html>

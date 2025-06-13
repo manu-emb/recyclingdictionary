@@ -5,6 +5,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
+    font-family: "Open Sans";
 }
 #logo {
     font-family: "Open Sans";
@@ -16,11 +17,14 @@
     text-align: center;
     transition: 0.3s ease;
     }
-.logoResult {
+.logoOther {
     font-family: "Open Sans";
     margin-top: 10px;
     margin-bottom: 7vh;
     font-size: 25px;
+}
+.logoOther:hover{
+    cursor: pointer;
 }
 #textBox {
     position: relative;
