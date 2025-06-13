@@ -88,10 +88,17 @@
     font-family: "Open Sans";
     margin-top: 30px;
 }
-#linkToGames {
+.header-button {
     height: 40px;
     width: 100px;
     position: absolute;
+}
+#linkToGames {
     top: 8px;
     right: 16px;
+}
+#a2hs{
+    top: 8px;
+    right: 132px;
+    display: none;
 }
