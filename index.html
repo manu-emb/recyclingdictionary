@@ -23,14 +23,18 @@
         <script src="./homepage.js"> </script>
     </div>
     <script>
-        //check for service worker support
-        if ('serviceWorker' in navigator){
-            navigator.serviceWorker.register('/recyclingdictionary/sw.js')
+        // Check that service workers are registered
+        if ('serviceWorker' in navigator) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/recyclingdictionary/sw.js');
+        });
         }
         //hide logo on textbox focus
         const textbox = document.getElementById('textBox');
         const logo = document.getElementById('logo');
         const games = document.getElementById('linkToGames');
+        const install = document.getElementById("a2hs");
         
         console.log(innerWidth / innerHeight)
             document.addEventListener('click', function(event) {
@@ -40,11 +44,14 @@
                 if (isClickOnTextbox && innerWidth / innerHeight <= 0.99) {
                     logo.style.display = "none"; 
                     games.style.display = "none";
+                    install.dataset.displayM = "none";
                     textbox.focus(); 
                 } else if (!isClickOnTextbox && !isClickOnListItems){
                     logo.style.display = "block"; 
-                    games.style.display = "block"; 
+                    games.style.display = "block";
+                    install.dataset.displayM = "block"; 
                 }
+                installBtnDisplayVerdict();
             });
     </script>
 </body>
