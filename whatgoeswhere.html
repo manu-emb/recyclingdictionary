@@ -84,14 +84,13 @@
         }
         #stat-text{
             position: absolute;
-            right: 20px;
-            bottom: 25vh;
+            bottom: 20vh;
             font-size: calc(10px + 0.5vw)
         }
         #result-text{
             display: none;
             position: absolute;
-            bottom: 15vh;
+            bottom: 20vh;
             font-size: 20px;
             text-align: center;
         }
@@ -185,8 +184,9 @@
         //show buttons
         btnRecycle.style.display = "block";
         btnGarbage.style.display = "block";
+        txtStat.style.display = "block";
         //load image
-        imgItem.src = "images/" + images[index]
+        imgItem.src = "images-lite/" + images[index]
         txtStat.innerHTML = `Items left: ${images.length - index}<br>
             Correct: ${gotCorrect}<br>
             Incorrect: ${gotIncorrect}`
@@ -195,6 +195,7 @@
         //hide buttons
         btnRecycle.style.display = "none";
         btnGarbage.style.display = "none";
+        txtStat.style.display = "none";
 
         //determine text
         let verifyText = "";

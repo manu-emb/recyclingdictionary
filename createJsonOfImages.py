@@ -31,4 +31,7 @@ except PermissionError as e:
     print(f"Error: Permission denied. {e}")
 
 except Exception as e:
-    print(f"An unexpected error occurred: {e}")
+    print(f"An unexpected error occurred: {e}")\
+
+#once done, use a service such as https://bulkimagecompressor.com/ to bulk compress the image files. My settings are: quality=50 maxsize=0.01 maxwidth=300 maxheight=300
+#put them in images-lite

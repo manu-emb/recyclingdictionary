@@ -21,6 +21,7 @@
     let q = url.searchParams.get("q");
     let searchItems = [];
     let itemIndex = null;
+    let imageIndex = null;
     fetch("recyclingitems.json")
         .then(response => response.json())
         .then(data => {
@@ -36,25 +37,22 @@
                 document.getElementById("title").innerText = searchItems[itemIndex].name;
                 //get image (png or jpg)
                 const img = document.getElementById("img")
-                fetch(`images/${searchItems[itemIndex].identifier}.png`)
-                    .then((response) => {
-                        if (response.ok) {
-                            img.src = `images/${searchItems[itemIndex].identifier}.png`;
-                        } else {
-                            fetch(`images/${searchItems[itemIndex].identifier}.jpg`)
-                                .then((response) => {
-                                    if (response.ok) {
-                                        img.src = `images/${searchItems[itemIndex].identifier}.jpg`;
-                                    } else{
-                                        //show the placeholder image if no image is found
-                                        img.src = 'placeholderimage.jpg';
-                                    }
-                                })
+                fetch("imageslist.json")
+                    .then(response => response.json())
+                    .then(images => {
+                        for(i = 0; i < images.length; i++){
+                            if (images[i] == q+".png" || images[i] == q+".jpg"){
+                                imageIndex = i
+                                break
+                            }
                         }
-                    })
-                    .catch((error) => {
-                        console.log('There was an error with the request')
-                    })
+                        if (imageIndex != null) {
+                            img.src = `images-lite/${images[imageIndex]}`;
+                        } else{
+                            //show the placeholder image if no image is found
+                            img.src = 'placeholderimage.jpg';
+                        }
+                })
                 if (searchItems[itemIndex].canRecycle == true){
                     document.getElementById("recycling-status").innerHTML = "<span style=\"color:green\">✔ Item is recyclable</span>";
                 }
